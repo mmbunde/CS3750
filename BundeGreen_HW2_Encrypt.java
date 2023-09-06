@@ -8,8 +8,6 @@ public class BundeGreen_HW2_Encrypt{
         int[] K = new int[4];
         int[] L = new int[3];
         int[] R = new int[3];
-        R[0] = 0x8000006b;
-        L[1] = R[0];
         Scanner keyboard = new Scanner(System.in);
         
         for(int i = 0; i < 4; i++){
@@ -19,7 +17,9 @@ public class BundeGreen_HW2_Encrypt{
 
         System.out.println("Please enter your hex string for L[0] without the '0x'");
         L[0] = Integer.parseUnsignedInt(keyboard.nextLine(), 16);
-        
+        System.out.println("Please enter your hex string for R[0] without the '0x'");
+        R[0] = Integer.parseUnsignedInt(keyboard.nextLine(), 16);
+        L[1] = R[0];
         int f = ((R[0] << 4) + K[0]) ^ (R[0] + deltaOne) ^ ((R[0] >>> 5) + K[1]);
         R[1] = L[0] + f;
         L[2] = R[1];
