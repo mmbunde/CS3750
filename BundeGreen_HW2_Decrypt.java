@@ -26,14 +26,16 @@ public class BundeGreen_HW2_Decrypt{
         L[0] = R[1] - g;
         R[0] = L[1];
 
+        System.out.printf("deltaOne 0x%08X%n", deltaOne);
+        System.out.printf("deltaTwo 0x%08X%n", deltaTwo);
         for(int i = 0; i < 4; i++){
-            System.out.println("K[" + i + "]: " + Integer.toUnsignedString(K[i]));
+            System.out.printf("K[%d] 0x%08X%n", i, K[i]);
         }
         for(int i = 0; i < 3; i++){
-            System.out.printf("R[%d] = 0x%08X%n", i, R[i]);
+            System.out.printf("R[%d] 0x%08X%n", i, R[i]);
         }
         for(int i = 0; i < 3; i++){
-            System.out.printf("L[%d] = 0x%08X%n", i, L[i]);
+            System.out.printf("L[%d] 0x%08X%n", i, L[i]);
         }
     }
 }

@@ -26,14 +26,16 @@ public class BundeGreen_HW2_Encrypt{
         int g = ((R[1] << 4) + K[2]) ^ (R[1] + deltaTwo) ^ ((R[1] >>> 5) + K[3]);
         R[2] = L[1] + g;
         
+        System.out.printf("deltaOne 0x%08X%n", deltaOne);
+        System.out.printf("deltaTwo 0x%08X%n", deltaTwo);
         for(int i = 0; i < 4; i++){
-            System.out.println("K[" + i + "]: " + Integer.toUnsignedString(K[i]));
+            System.out.printf("K[%d] 0x%08X%n", i, K[i]);
         }
         for(int i = 0; i < 3; i++){
-            System.out.printf("R[%d] = 0x%08X%n", i, R[i]);
+            System.out.printf("R[%d] 0x%08X%n", i, R[i]);
         }
         for(int i = 0; i < 3; i++){
-            System.out.printf("L[%d] = 0x%08X%n", i, L[i]);
+            System.out.printf("L[%d] 0x%08X%n", i, L[i]);
         }
     }
 }
