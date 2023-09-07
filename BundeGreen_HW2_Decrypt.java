@@ -31,10 +31,10 @@ public class BundeGreen_HW2_Decrypt{
         for(int i = 0; i < 4; i++){
             System.out.printf("K[%d] 0x%08X%n", i, K[i]);
         }
-        for(int i = 0; i < 3; i++){
+        for(int i = 2; i >= 0; i--){
             System.out.printf("R[%d] 0x%08X%n", i, R[i]);
         }
-        for(int i = 0; i < 3; i++){
+        for(int i = 2; i >= 0; i--){
             System.out.printf("L[%d] 0x%08X%n", i, L[i]);
         }
     }
